@@ -1,0 +1,103 @@
+.tabla-contenedor {
+  border: 1px solid rgba(46, 204, 64, 0.15);
+}
+
+.tabla-cabecera {
+  background-color: var(--verde);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-success {
+  background-color: var(--verde);
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: var(--verde-oscuro);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--verde-oscuro);
+  color: white;
+  border-color: var(--verde-oscuro);
+}
+
+.btn-outline-danger:hover {
+  background-color: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.encabezado {
+  position: relative;
+}
+
+.logo-empresa {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 14%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.titulo-empresa {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.barra-navegacion {
+  background-color: #eaffea;
+  border-top: 2px solid var(--verde);
+  border-bottom: 2px solid var(--verde);
+}
+
+.barra-navegacion .enlace {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.barra-navegacion .enlace:hover {
+  background-color: var(--verde);
+  color: white;
+}
+
+.barra-navegacion .activo {
+  background-color: var(--verde);
+  color: white;
+  box-shadow: 0 2px 6px rgba(46, 204, 64, 0.2);
+}
+
+.pie-pagina {
+  background-color: #fff;
+  color: #222;
+}
+
+.pie-pagina h5 {
+  font-size: 1.2rem;
+}
+
+.pie-pagina .texto-gris {
+  color: var(--gris);
+}
+
+.pie-pagina .pequeno {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pie-pagina .mapa iframe {
+  box-shadow: 0 2px 8px rgba(46, 204, 64, 0.1);
+}
+
+@media (max-width: 768px) {
+  .pie-pagina {
+    text-align: center;
+  }
+}

@@ -1,0 +1,117 @@
+:root {
+  --verde: #2ecc40;
+  --verde-oscuro: #218c29;
+  --gris: #6b7280;
+  --fondo: #f8fff8;
+}
+
+body {
+  background-color: var(--fondo);
+  color: #222;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.bg-blanco {
+  background-color: #fff;
+}
+
+.sombra-suave {
+  box-shadow: 0 1px 4px rgba(46, 204, 64, 0.1);
+}
+
+.encabezado {
+  position: relative;
+}
+
+.logo-empresa {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 14%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.titulo-empresa {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.barra-navegacion {
+  background-color: #eaffea; /* Verde muy suave */
+  border-top: 2px solid var(--verde);
+  border-bottom: 2px solid var(--verde);
+  box-shadow: 0 1px 4px rgba(46, 204, 64, 0.1);
+}
+
+.barra-navegacion .enlace {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.barra-navegacion .enlace:hover {
+  background-color: var(--verde);
+  color: white;
+}
+
+.barra-navegacion .activo {
+  background-color: var(--verde);
+  color: white;
+  box-shadow: 0 2px 6px rgba(46, 204, 64, 0.2);
+}
+
+
+.tarjeta-equipo {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-equipo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(46, 204, 64, 0.15);
+}
+
+.imagen-equipo {
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.nombre {
+  font-size: 1.2rem;
+}
+
+.correo {
+  font-size: 0.95rem;
+  color: var(--gris);
+}
+
+
+.pie-pagina {
+  background-color: #fff;
+}
+
+.texto-gris {
+  color: var(--gris);
+}
+
+.pequeno {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .titulo-empresa {
+    font-size: 1.4rem;
+  }
+
+  .logo-empresa {
+    width: 60px;
+    height: 60px;
+  }
+}

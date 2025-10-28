@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java - MotoCorp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/java.css">
+  <link rel="shortcut icon" href="../Imagenes/MotoCorp.png" type="image/x-icon">
+</head>
+<body>
+  <header class="encabezado bg-white sombra-suave">
+    <div class="container position-relative py-3">
+      <img src="../Imagenes/MotoCorp.png" alt="MotoCorp" class="logo-empresa">
+      <h1 class="titulo-empresa text-success fw-bold">MOTO CORP</h1>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light barra-navegacion sombra-suave">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link enlace" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link enlace" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link enlace" href="CRUD.html">CRUD</a></li>
+          <li class="nav-item"><a class="nav-link enlace" href="BaseDatos/base_datos.html">Base de datos</a></li>
+          <li class="nav-item"><a class="nav-link enlace activo" href="java.html">Java</a></li>
+          <li class="nav-item"><a class="nav-link enlace" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link enlace" href="presentacion.html">Presentación</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="text-success fw-bold">Código Java</h2>
+      <p class="text-muted">Ejemplo del código desarrollado en Java para MotoCorp.</p>
+    </div>
+
+    <div class="bloque-codigo mb-4">
+<pre><code class="language-java">
+import java.util.Scanner;
+
+public class CiclosWhile {
+
+    public static void main(String[] args) {
+
+        Scanner nk = new Scanner(System.in);
+
+        double[] temperaturas = new double[7];
+        int contador = 0;
+        String respuesta;
+
+
+        while (contador < temperaturas.length) {
+            System.out.print("Ingresa la temperatura del día " + (contador + 1) + ": ");
+            temperaturas[contador] = nk.nextDouble();
+            contador++;
+
+
+            if (contador == temperaturas.length) {
+                System.out.println("Se han registrado todas las temperaturas de la semana.");
+                break;
+            }
+
+
+            System.out.print("¿Deseas ingresar otra temperatura? (s/n): ");
+            respuesta = nk.next().toLowerCase();
+
+            if (respuesta.equals("n")) {
+                break;
+            }
+        }
+
+
+        System.out.println("\nTemperaturas registradas:");
+        for (int i = 0; i < contador; i++) {
+            System.out.println("Día " + (i + 1) + ": " + temperaturas[i] + "°C");
+        }
+
+
+        if (contador > 0) {
+            double max = temperaturas[0];
+            double min = temperaturas[0];
+
+            for (int i = 1; i < contador; i++) {
+                if (temperaturas[i] > max) {
+                    max = temperaturas[i];
+                }
+                if (temperaturas[i] < min) {
+                    min = temperaturas[i];
+                }
+            }
+
+            System.out.println("\nTemperatura más alta: " + max + "°C");
+            System.out.println("Temperatura más baja: " + min + "°C");
+        } else {
+            System.out.println("No se registraron temperaturas.");
+        }
+
+    }
+}
+</code></pre>
+    </div>
+
+<footer class="pie-pagina mt-5 border-top bg-blanco sombra-suave">
+  <div class="container py-5">
+    <div class="row gy-4">
+      
+      <!-- Columna 1 -->
+      <div class="col-md-4">
+        <h5 class="text-success fw-bold mb-3">MotoCorp</h5>
+        <p class="texto-gris pequeno">
+          En MotoCorp nos dedicamos a ofrecer soluciones innovadoras en gestión y desarrollo de software automotriz, impulsando la tecnología al servicio del transporte.
+        </p>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col-md-4">
+        <h5 class="text-success fw-bold mb-3">Contáctanos</h5>
+        <ul class="list-unstyled texto-gris pequeno mb-0">
+          <li>📍 Medellín, Colombia</li>
+          <li>📧 contacto@motocorp.com</li>
+          <li>📞 +57 000 000 0000</li>
+        </ul>
+      </div>
+
+      <!-- Columna 3 -->
+      <div class="col-md-4">
+        <h5 class="text-success fw-bold mb-3">Ubicación</h5>
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.14288079289!2d-75.56514138870375!3d6.244894226310644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442859d833cfa3%3A0xa3fca5c91547777f!2sCesde%20-%20Centro%20de%20Estudios%20Especializados!5e0!3m2!1sen!2sco!4v1761238839147!5m2!1sen!2sco" 
+          width="440" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4">
+    
+    <div class="text-center texto-gris pequeno">
+      © 2025 MotoCorp. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+:root {
+  --verde: #2ecc40;
+  --verde-oscuro: #218c29;
+  --gris: #6b7280;
+  --fondo: #f8fff8;
+}
+
+body {
+  background-color: var(--fondo);
+  color: #222;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.sombra-suave {
+  box-shadow: 0 1px 4px rgba(46, 204, 64, 0.1);
+}
+
+.borde-redondeado {
+  border-radius: 10px;
+}
+
+.encabezado {
+  position: relative;
+}
+
+.logo-empresa {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.titulo-empresa {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.barra-navegacion {
+  background-color: #eaffea;
+  border-top: 2px solid var(--verde);
+  border-bottom: 2px solid var(--verde);
+}
+
+.enlace {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.enlace:hover {
+  background-color: var(--verde);
+  color: white;
+}
+
+.activo {
+  background-color: var(--verde);
+  color: white;
+}
+
+.bloque-codigo {
+  background-color: #000000;
+  border: 1px solid rgba(46, 204, 64, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(46, 204, 64, 0.08);
+  padding: 16px 20px;
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.pie-pagina {
+  background-color: #fff;
+  color: #222;
+}
+
+.pie-pagina h5 {
+  font-size: 1.2rem;
+}
+
+.pie-pagina .texto-gris {
+  color: var(--gris);
+}
+
+.pie-pagina .pequeno {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pie-pagina .mapa iframe {
+  box-shadow: 0 2px 8px rgba(46, 204, 64, 0.1);
+}
+
+@media (max-width: 768px) {
+  .pie-pagina {
+    text-align: center;
+  }
+}
